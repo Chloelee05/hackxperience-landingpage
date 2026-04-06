@@ -1,9 +1,14 @@
 "use client"
 import Image from "next/image";
-import HeroPage from "./components/hero";
+import Hero from "./components/hero";
+import About from "./components/about";
 
 export default function Home() {
   return (
-    <HeroPage></HeroPage>
+    <div>
+      <Hero></Hero>
+    <About></About>
+    </div>
+    
   );
 }

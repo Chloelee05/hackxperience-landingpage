@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const HeroPage: React.FC = () => {
+const Hero: React.FC = () => {
   const [timeLeft] = useState({
     days: 42,
     hrs: 18,
@@ -126,4 +126,4 @@ const HeroPage: React.FC = () => {
   );
 };
 
-export default HeroPage;
+export default Hero;
