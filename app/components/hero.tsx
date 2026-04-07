@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {} from 'react';
+import DecryptedTimerText from './ui/DecryptedText';
 
 const Hero: React.FC = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -37,6 +38,7 @@ const Hero: React.FC = () => {
 
   // Color Palette Constants based on your image:
   const RED = "#c00000";
+  const DARK_RED = "#A20000";
   const CREAM_BG = "#f2ede5";
   const DARK_TEXT = "#1d1c17";
   const OFF_WHITE = "#fef9f1";
@@ -46,6 +48,7 @@ const Hero: React.FC = () => {
       className="relative min-h-screen flex items-center justify-center overflow-hidden p-6 md:p-12"
       style={{ backgroundColor: CREAM_BG }}
     >
+      
       {/* Background Texture (Subtle Grid) */}
       <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none" 
            style={{ backgroundImage: `linear-gradient(${DARK_TEXT} 1px, transparent 1px), linear-gradient(90deg, ${DARK_TEXT} 1px, transparent 1px)`, backgroundSize: '20px 20px' }}>
@@ -91,8 +94,7 @@ const Hero: React.FC = () => {
             THE ARCHITECTS OF THE <span style={{ color: RED }}>UNDERGROUND</span>
           </h1>
 
-          {/* Live Countdown Grid (Added SEC column) */}
-          <div className="flex gap-4 md:gap-6 items-end">
+          <div className="flex gap-6 items-end">
             {[
               { label: 'DAYS', value: timeLeft.days },
               { label: 'HRS', value: timeLeft.hrs },
@@ -101,15 +103,22 @@ const Hero: React.FC = () => {
             ].map((item, index) => (
               <React.Fragment key={item.label}>
                 <div className="flex flex-col">
-                  <span className="font-mono text-[10px] font-bold tracking-tighter" style={{ color: RED }}>
+                  <span className="font-mono text-[10px] font-bold" style={{ color: RED }}>
                     {item.label}:
                   </span>
-                  <span className="text-5xl md:text-6xl font-black tabular-nums leading-none" style={{ color: DARK_TEXT }}>
-                    {String(item.value).padStart(2, '0')}
-                  </span>
+                  
+                  {/* The Decrypting Number */}
+                  <DecryptedTimerText 
+                    text={String(item.value).padStart(2, '0')}
+                    speed={55}
+                    maxIterations={6}
+                    className="text-6xl font-black"
+                    style={{ color: DARK_TEXT }}
+                    encryptedClassName="text-6xl font-black text-[#c00000] opacity-70"
+                  />
                 </div>
                 {index < 3 && (
-                  <span className="text-4xl md:text-6xl font-black pb-1" style={{ color: RED }}>:</span>
+                  <span className="text-6xl font-black pb-1" style={{ color: RED }}>:</span>
                 )}
               </React.Fragment>
             ))}
@@ -124,24 +133,31 @@ const Hero: React.FC = () => {
               </p>
 
               {/* Buttons */}
-              <div className="flex flex-wrap gap-4 pt-4">
-                <button 
-                  className="px-10 py-4 font-black uppercase text-sm tracking-widest transition-transform active:translate-y-1"
-                  style={{ 
-                    backgroundColor: RED, 
-                    color: OFF_WHITE,
-                    boxShadow: `6px 6px 0px ${DARK_TEXT}`
-                  }}
+              <a 
+                  href="https://t.me/+M4VYyn6OxJY0OGI1" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block"
                 >
-                  join ITClub telegram
-                </button>
+                  <button 
+                    className="px-10 py-4 font-black uppercase text-sm tracking-widest transition-transform active:translate-y-1"
+                    style={{ 
+                      backgroundColor: RED, 
+                      color: OFF_WHITE,
+                      boxShadow: `6px 6px 0px ${DARK_TEXT}`
+                    }}
+                    onMouseEnter={(e) => e.currentTarget.style.backgroundColor = DARK_RED}
+                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = RED}
+                  >
+                    join ITClub telegram
+                  </button>
+              </a>
                 
-              </div>
+            </div>
           </div>
           
         </div>
       </div>
-    </div>
   );
 };
 
