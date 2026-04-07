@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://hackxperience2026.vercel.app
+
+# Sitemaps
+Sitemap: https://hackxperience2026.vercel.app/sitemap.xml
