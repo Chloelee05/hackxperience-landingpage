@@ -65,7 +65,7 @@ const Hero: React.FC = () => {
             className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200')] bg-cover bg-center mix-blend-screen opacity-50 grayscale" 
           ></div>
 
-          <div className="relative h-full flex flex-col justify-end p-6 bg-gradient-to-t from-black/90 to-transparent">
+          <div className="relative h-full flex flex-col justify-end p-6 bg-linear-to-t from-black/90 to-transparent">
             <div className="font-mono text-xs mb-2 animate-pulse tracking-widest" style={{ color: RED }}>
               STATUS: INITIALIZING...
             </div>

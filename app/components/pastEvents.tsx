@@ -8,9 +8,9 @@ const PastEvents: React.FC = () => {
   const WHITE = "#ffffff";
 
   const stats = [
-    { label: 'sign ups', value: '436' },
-    { label: 'participants', value: '295' },
-    { label: 'teams', value: '48' }
+    { label: 'sign ups', value: '120' },
+    { label: 'participants', value: '90' },
+    { label: 'teams', value: '20' }
   ];
 
   return (
@@ -44,10 +44,7 @@ const PastEvents: React.FC = () => {
               HACK<span style={{ color: RED }}>EXPERIENCE</span>
             </h3>
             <p className="text-lg leading-relaxed font-medium" style={{ color: DARK_TEXT }}>
-              In 2025, Hackexperience challenged over 300 developers, students, and 
-              young professionals to create solutions that promote healthier habits, 
-              reduce digital dependency, and reconnect people with the real world. 
-              The event marked a turning point in underground technical collaboration.
+              In 2025, Hackexperience brought together 90+ participants to develop 20 distinct projects within a 24-hour sprint. The event focused on practical execution and collaborative prototyping among students and early-career developers. Our efforts in coordinating this technical exchange were recognized with SIM’s 2025 Outstanding Event Award (Silver)
             </p>
             <div className="inline-block px-4 py-1 font-mono text-sm font-bold border-2" style={{ borderColor: RED, color: RED }}>
               PROJECT_LOG_025
@@ -60,7 +57,7 @@ const PastEvents: React.FC = () => {
           {stats.map((stat) => (
             <div 
               key={stat.label}
-              className="p-10 border-2 flex flex-col items-center justify-center transition-transform hover:translate-y-[-4px]"
+              className="p-10 border-2 flex flex-col items-center justify-center transition-transform hover:translate-y-1"
               style={{ 
                 backgroundColor: WHITE, 
                 borderColor: DARK_TEXT,

@@ -26,9 +26,7 @@ const About: React.FC = () => {
           </h2>
           
           <p className="text-lg md:text-xl leading-relaxed mb-12 opacity-80 font-medium">
-            Hackathon 2026 is more than a competition. It's a high-intensity 
-            environment designed to push your technical boundaries, connect you 
-            with industry leaders, and provide a platform for your most ambitious projects.
+            Hackexperience 2026 is a 24-hour build sprint is a dedicated space where ideas turn into real products. Participants will focus on rapid prototyping and technical execution within a high-intensity environment. It is a practical opportunity to build alongside other developers
           </p>
 
           <div className="grid md:grid-cols-2 gap-10 pt-10 border-t border-white/10">
@@ -47,7 +45,7 @@ const About: React.FC = () => {
               </h4>
               <p className="text-sm md:text-base leading-relaxed" style={{ color: TEXT_DIM }}>
                 Access to industry mentors, exclusive workshops, networking 
-                with tech recruiters, and over $10k in prizes.
+                with tech recruiters.
               </p>
             </div>
           </div>
