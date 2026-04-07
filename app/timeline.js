@@ -1,0 +1,193 @@
+const EVENTS = [
+  { date: 'TBA', title: 'REGISTRATION DEADLINE', meta: '00:00 AM - 00:00 PM // VENUE TBC', button: 'REGISTER_NOW' },
+  { date: 'TBA', title: 'OPENING CEREMONY', meta: '00:00 AM - 00:00 PM // VENUE TBC', button: 'SET_REMINDER' },
+  { date: 'TBA', title: 'HACKING PERIOD', meta: '00:00 AM - 00:00 PM // BUILD. SHIP.', button: 'SET_REMINDER' },
+  { date: 'TBA', title: 'SUBMISSION DEADLINE', meta: '00:00 AM - 00:00 PM // FINAL REPO + DEMO', button: 'SET_REMINDER' },
+  { date: 'TBA', title: 'JUDGING + WINNERS', meta: '00:00 AM - 00:00 PM // VENUE TBC', button: 'SET_REMINDER' },
+]
+
+const JUDGES = [
+  {
+    name: 'JUDGE NAME',
+    role: 'CHIEF TECHNOLOGY OFFICER',
+    company: 'COMPANY NAME',
+    bio: 'Industry leader with 10+ years building scalable systems. Passionate about AI and developer tooling.',
+    linkedin: '#',
+    img: null,
+  },
+  {
+    name: 'JUDGE NAME',
+    role: 'SENIOR ENGINEER',
+    company: 'COMPANY NAME',
+    bio: 'Full-stack engineer and open source contributor. Specialises in distributed systems and cloud architecture.',
+    linkedin: '#',
+    img: null,
+  },
+  {
+    name: 'JUDGE NAME',
+    role: 'PRODUCT MANAGER',
+    company: 'COMPANY NAME',
+    bio: 'Led product at multiple startups from zero to scale. Focused on developer experience and growth.',
+    linkedin: '#',
+    img: null,
+  },
+]
+
+const SPONSORS = [
+  { name: 'GOLD SPONSOR', tier: 'gold', img: null },
+  { name: 'GOLD SPONSOR', tier: 'gold', img: null },
+  { name: 'SILVER SPONSOR', tier: 'silver', img: null },
+  { name: 'SILVER SPONSOR', tier: 'silver', img: null },
+  { name: 'SILVER SPONSOR', tier: 'silver', img: null },
+  { name: 'BRONZE PARTNER', tier: 'bronze', img: null },
+  { name: 'BRONZE PARTNER', tier: 'bronze', img: null },
+  { name: 'BRONZE PARTNER', tier: 'bronze', img: null },
+]
+
+function SectionHeader({ title, subtitle }) {
+  return (
+    <div className="mb-12">
+      <div className="flex items-center gap-5 mb-3">
+        <div className="flex-1 h-px bg-red-700" />
+        <span className="text-xl font-bold tracking-widest text-white whitespace-nowrap font-mono">{title}</span>
+        <div className="flex-1 h-px bg-red-700" />
+      </div>
+      {subtitle && (
+        <p className="text-center text-xs tracking-widest text-gray-400 font-mono mt-2">{subtitle}</p>
+      )}
+    </div>
+  )
+}
+
+function Label({ children }) {
+  return <div className="text-red-500 text-xs tracking-widest font-mono mb-1.5">{children}</div>
+}
+
+function Meta({ children }) {
+  return <div className="text-gray-400 text-xs tracking-widest font-mono">{children}</div>
+}
+
+function ActionButton({ href, children }) {
+  const cls = "cursor-pointer border border-gray-500 text-gray-300 text-xs tracking-widest font-mono px-5 py-2 hover:border-white hover:text-white transition-all duration-200 inline-block"
+  if (href) return <a href={href} target="_blank" rel="noopener noreferrer" className={cls}>{children}</a>
+  return <button className={cls}>{children}</button>
+}
+
+function TimelineItem({ date, title, meta, button, isLast }) {
+  return (
+    <div className="flex gap-8">
+      <div className="flex flex-col items-center w-4 flex-shrink-0">
+        <div className="w-3.5 flex-shrink-0 bg-red-700" style={{ height: 18, clipPath: 'polygon(50% 0%, 100% 35%, 100% 100%, 0% 100%, 0% 35%)' }} />
+        {!isLast && <div className="w-0.5 bg-red-700 flex-1 min-h-16" />}
+      </div>
+      <div className="flex-1 pb-10 pt-0.5">
+        <Label>{date}</Label>
+        <div className="text-white text-xl font-bold tracking-wider font-mono mb-1.5">{title}</div>
+        <Meta>{meta}</Meta>
+        <div className="mt-4"><ActionButton>{button}</ActionButton></div>
+      </div>
+    </div>
+  )
+}
+
+function JudgeRow({ name, role, company, bio, linkedin, img, isLast }) {
+  return (
+    <div className="flex gap-8">
+      <div className="flex flex-col items-center w-4 flex-shrink-0">
+        <div className="w-3.5 flex-shrink-0 bg-gray-600" style={{ height: 18, clipPath: 'polygon(50% 0%, 100% 35%, 100% 100%, 0% 100%, 0% 35%)' }} />
+        {!isLast && <div className="w-0.5 bg-gray-700 flex-1 min-h-24" />}
+      </div>
+      <div className="flex gap-10 flex-1 pb-16 pt-1 items-start">
+        <div className="flex-shrink-0 overflow-hidden bg-gray-800 border border-gray-700 rounded-xl" style={{ width: 140, height: 140 }}>
+          {img ? (
+            <img src={img} alt={name} className="w-full h-full object-cover" />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center text-gray-500 text-xs font-mono">IMG</div>
+          )}
+        </div>
+        <div className="flex-1">
+          <Label>{role}</Label>
+          <div className="text-white text-3xl font-bold tracking-wider font-mono mb-2">{name}</div>
+          <Meta>{company}</Meta>
+          <div className="border-t border-gray-700 my-6" />
+          <p className="text-gray-400 text-sm tracking-wide leading-relaxed font-mono mb-6">{bio}</p>
+          {linkedin && <ActionButton href={linkedin}>LINKEDIN ↗</ActionButton>}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function SponsorRow({ tier, sponsors }) {
+  const tierMeta = {
+    gold: { label: 'GOLD TIER', sub: '// PRINCIPAL SPONSORS' },
+    silver: { label: 'SILVER TIER', sub: '// SUPPORTING SPONSORS' },
+    bronze: { label: 'BRONZE TIER', sub: '// COMMUNITY PARTNERS' },
+  }
+  const { label, sub } = tierMeta[tier]
+
+  return (
+    <div className="flex gap-8 mb-16 last:mb-0">
+      <div className="flex-shrink-0" style={{ width: 140 }}>
+        <Label>{label}</Label>
+        <Meta>{sub}</Meta>
+      </div>
+      <div className="flex-1 grid gap-6" style={{ gridTemplateColumns: `repeat(${sponsors.length}, 1fr)` }}>
+        {sponsors.map((s, i) => (
+          <div key={i} className="border border-gray-700 flex items-center justify-center hover:border-gray-500 transition-colors duration-200" style={{ height: tier === 'gold' ? 110 : tier === 'silver' ? 90 : 70 }}>
+            {s.img ? (
+              <img src={s.img} alt={s.name} className="object-contain grayscale brightness-75 hover:brightness-100 transition-all duration-200" style={{ maxWidth: '65%', maxHeight: tier === 'gold' ? 48 : 32 }} />
+            ) : (
+              <div className="text-gray-300 text-xl font-bold tracking-wider font-mono">{s.name}</div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+export default function TimelineSection() {
+  const gold = SPONSORS.filter(s => s.tier === 'gold')
+  const silver = SPONSORS.filter(s => s.tier === 'silver')
+  const bronze = SPONSORS.filter(s => s.tier === 'bronze')
+
+  return (
+    <section className="bg-[#1a1a1a] px-16 pt-20 pb-40 font-mono">
+      <SectionHeader title="MAIN_EVENT_TIMELINE" />
+      <div className="flex flex-col">
+        {EVENTS.map((event, i) => (
+          <TimelineItem key={i} {...event} isLast={i === EVENTS.length - 1} />
+        ))}
+      </div>
+
+      <SectionHeader title="JUDGES_AND_MENTORS" subtitle="// INDUSTRY EXPERTS EVALUATING YOUR WORK" />
+      <div className="flex flex-col">
+        {JUDGES.map((judge, i) => (
+          <JudgeRow key={i} {...judge} isLast={i === JUDGES.length - 1} />
+        ))}
+      </div>
+
+      <SectionHeader title="SPONSORS_AND_PARTNERS" subtitle="// ORGANISATIONS MAKING THIS POSSIBLE" />
+      {gold.length > 0 && <SponsorRow tier="gold" sponsors={gold} />}
+      {silver.length > 0 && <SponsorRow tier="silver" sponsors={silver} />}
+      {bronze.length > 0 && <SponsorRow tier="bronze" sponsors={bronze} />}
+
+      <div className="w-full h-px bg-red-700 mt-24 mb-20" />
+
+      <div className="flex gap-10 py-10">
+        <div className="flex-shrink-0" style={{ width: 140 }}>
+          <Label>ENQUIRIES</Label>
+          <Meta>// SPONSORSHIP</Meta>
+        </div>
+        <div className="flex-1 pt-1">
+          <div className="text-white text-2xl font-bold tracking-wider font-mono mb-3">BECOME A SPONSOR</div>
+          <Meta>INTERESTED IN SUPPORTING THE NEXT GENERATION OF BUILDERS?</Meta>
+          <div className="mt-6">
+            <ActionButton href="mailto:it@mymail.sim.edu.sg">CONTACT_US ↗</ActionButton>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
