@@ -162,7 +162,6 @@ export default function TimelineSection() {
 
   return (
     <section className="bg-[#1a1a1a] px-4 sm:px-8 md:px-16 pt-12 sm:pt-16 md:pt-20 pb-8 sm:pb-12 font-mono">
-
       <SectionHeader title="MAIN_EVENT_TIMELINE" />
       <div className="flex flex-col">
         {EVENTS.map((event, i) => (
