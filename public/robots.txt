@@ -1,9 +1,24 @@
-# *
 User-agent: *
 Allow: /
 
-# Host
-Host: https://hackxperience2026.vercel.app
+# OpenAI (ChatGPT) crawler
+User-agent: GPTBot
+Allow: /
 
-# Sitemaps
+# Anthropic (Claude) crawler
+User-agent: ClaudeBot
+Allow: /
+
+# Perplexity AI crawler
+User-agent: PerplexityBot
+Allow: /
+
+# Google AI (Gemini/Vertex AI) control crawler
+User-agent: Google-Extended
+Allow: /
+
+# Common Crawl crawler (used by multiple AI systems)
+User-agent: CCBot
+Allow: /
+
 Sitemap: https://hackxperience2026.vercel.app/sitemap.xml
