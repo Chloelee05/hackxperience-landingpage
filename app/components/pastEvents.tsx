@@ -14,7 +14,7 @@ const PastEvents: React.FC = () => {
 
   const eventData = {
     '2025': {
-      title: <>HACK<span style={{ color: RED }}>EXPERIENCE</span></>,
+      title: <>HACK<wbr/><span style={{ color: RED }}>EXPERIENCE</span></>,
       desc: "In 2025, Hackexperience brought together 90+ participants to develop 20 distinct projects within a 24-hour sprint. The event focused on practical execution and collaborative prototyping among students and early-career developers. Our efforts in coordinating this technical exchange were recognized with SIM’s 2025 Outstanding Event Award (Silver).",
       imgs: [
         "PastYear1.jpg",
@@ -58,8 +58,6 @@ const PastEvents: React.FC = () => {
 
   // Carousel Timer Effect
   useEffect(() => {
-    // Using setTimeout here so that if currentImageIndex changes (via clicking a dot), 
-    // the 3-second timer perfectly resets, preventing an instant skip.
     const timer = setTimeout(() => {
       setCurrentImageIndex((prevIndex) => 
         (prevIndex + 1) % eventData[activeYear].imgs.length
@@ -80,15 +78,15 @@ const PastEvents: React.FC = () => {
         </h2>
       </div>
 
-      <section className="py-10 px-15 mx-auto font-sans" style={{ backgroundColor: CREAM_BG, fontFamily: 'Montserrat, sans-serif' }}>
+      <section className="py-10 px-6 max-w-7xl mx-auto font-sans" style={{ backgroundColor: CREAM_BG, fontFamily: 'Montserrat, sans-serif' }}>
 
         {/* Tabs / Year Selector */}
-        <div className="flex gap-4 mb-10">
+        <div className="flex gap-4 mb-10 overflow-x-auto pb-2">
           {(['2025', '2024'] as const).map((year) => (
             <button
               key={year}
               onClick={() => setActiveYear(year)}
-              className="px-8 py-2 font-mono text-sm uppercase font-bold border-2 transition-transform active:translate-y-1 rounded-full"
+              className="px-8 py-2 font-mono text-sm uppercase font-bold border-2 transition-transform active:translate-y-1 rounded-full whitespace-nowrap"
               style={{ 
                 borderColor: DARK_TEXT,
                 backgroundColor: activeYear === year ? RED : WHITE,
@@ -133,8 +131,8 @@ const PastEvents: React.FC = () => {
                       onClick={() => setCurrentImageIndex(index)}
                       className={`h-2.5 rounded-full transition-all duration-500 ease-out shadow-[1px_1px_0px_rgba(0,0,0,0.5)] ${
                         index === currentImageIndex 
-                          ? 'w-7 bg-white' // Active: Oval
-                          : 'w-2.5 bg-white/50 hover:bg-white/80' // Inactive: Circle
+                          ? 'w-7 bg-white' 
+                          : 'w-2.5 bg-white/50 hover:bg-white/80'
                       }`}
                       aria-label={`Go to image ${index + 1}`}
                     />
@@ -170,7 +168,8 @@ const PastEvents: React.FC = () => {
           {/* Bottom Section: Branding & Description */}
           <div className="flex flex-col md:flex-row gap-8 items-start pt-6">
             <div className="w-full md:w-[40%] max-w-md space-y-4">
-              <h3 className="text-4xl md:text-5xl font-black tracking-tighter leading-none" style={{ color: DARK_TEXT }}>
+              {/* FIX 3: Added break-words and adjusted text sizes down slightly for mobile */}
+              <h3 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tighter leading-none break-words" style={{ color: DARK_TEXT }}>
                 {current.title}
               </h3>
               <div className="inline-block px-4 py-1 font-mono text-sm font-bold border-2" style={{ borderColor: RED, color: RED }}>
@@ -179,7 +178,7 @@ const PastEvents: React.FC = () => {
             </div>
             
             <div className="w-full md:w-[60%]">
-              <p className="text-lg leading-relaxed font-medium" style={{ color: DARK_TEXT }}>
+              <p className="text-base sm:text-lg leading-relaxed font-medium" style={{ color: DARK_TEXT }}>
                 {current.desc}
               </p>
             </div>

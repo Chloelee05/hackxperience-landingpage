@@ -4,8 +4,8 @@ import { IBM_Plex_Mono, Montserrat } from "next/font/google";
 const About: React.FC = () => {
   // Color Palette Constants
   const RED = "#c00000";
-  const DARK_BG = "#1d1c17"; // The near-black color
-  const CREAM_CARD = "#e7e2da"; // The light greyish-cream card
+  const DARK_BG = "#1d1c17"; 
+  const CREAM_CARD = "#e7e2da"; 
   const WHITE = "#ffffff";
   const TEXT_DIM = "rgba(255, 255, 255, 0.7)";
 
@@ -15,24 +15,24 @@ const About: React.FC = () => {
         
         {/* Main Large Card (Dark) */}
         <div 
-          className="lg:col-span-2 p-10 md:p-14 relative"
+          className="lg:col-span-2 p-6 md:p-14 relative"
           style={{ 
             backgroundColor: DARK_BG,
             color: WHITE,
             boxShadow: `12px 12px 0px 0px ${RED}` 
           }}
         >
-          <h2 className="text-4xl md:text-5xl font-black mb-8 tracking-tight">
-            HACKATHON_OVERVIEW
+          <h2 className="text-2xl min-[400px]:text-3xl sm:text-4xl md:text-5xl font-black mb-6 md:mb-8 tracking-tight">
+            HACKATHON_<wbr/>OVERVIEW
           </h2>
           
-          <p className="text-lg md:text-xl leading-relaxed mb-12 opacity-80 font-medium">
+          <p className="text-base sm:text-lg md:text-xl leading-relaxed mb-10 md:mb-12 opacity-80 font-medium">
             HackXperience 2026 is a 24-hour hackathon where teams of 4–5 turn problem statements into working prototypes. From kickoff to final commit, you'll ideate, build, and ship — then present to industry judges. Last year's run produced 20 projects from 90+ builders and took home SIM's Outstanding Event Award (Silver). This time, we're scaling up.
           </p>
 
-          <div className="grid md:grid-cols-2 gap-10 pt-10 border-t border-white/10">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-10 pt-8 md:pt-10 border-t border-white/10">
             <div>
-              <h4 className="font-mono font-bold mb-3 uppercase tracking-widest text-sm" style={{ color: RED }}>
+              <h4 className="font-mono font-bold mb-3 uppercase tracking-widest text-xs sm:text-sm" style={{ color: RED }}>
                 // WHO SHOULD JOIN
               </h4>
               <p className="text-sm md:text-base leading-relaxed" style={{ color: TEXT_DIM }}>
@@ -40,7 +40,7 @@ const About: React.FC = () => {
               </p>
             </div>
             <div>
-              <h4 className="font-mono font-bold mb-3 uppercase tracking-widest text-sm" style={{ color: RED }}>
+              <h4 className="font-mono font-bold mb-3 uppercase tracking-widest text-xs sm:text-sm" style={{ color: RED }}>
                 // WHAT YOU GET
               </h4>
               <p className="text-sm md:text-base leading-relaxed" style={{ color: TEXT_DIM }}>
@@ -51,7 +51,7 @@ const About: React.FC = () => {
         </div>
 
         {/* Right Side Column (Stats Cards) */}
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-8 mt-4 lg:mt-0">
           
           {/* 24H Card */}
           <div 
@@ -61,10 +61,10 @@ const About: React.FC = () => {
               borderColor: DARK_BG 
             }}
           >
-            <span className="text-6xl font-black" style={{ color: RED }}>
+            <span className="text-5xl md:text-6xl font-black" style={{ color: RED }}>
               24H
             </span>
-            <span className="font-mono text-xs uppercase font-bold tracking-[0.2em] mt-3" style={{ color: DARK_BG }}>
+            <span className="font-mono text-[10px] md:text-xs uppercase font-bold tracking-[0.2em] mt-3" style={{ color: DARK_BG }}>
               Continuous Innovation
             </span>
           </div>
@@ -74,10 +74,10 @@ const About: React.FC = () => {
             className="p-8 flex-1 flex flex-col justify-center"
             style={{ backgroundColor: RED, color: WHITE }}
           >
-            <span className="text-6xl font-black">
+            <span className="text-5xl md:text-6xl font-black">
               500+
             </span>
-            <span className="font-mono text-xs uppercase font-bold tracking-[0.2em] mt-3 opacity-70">
+            <span className="font-mono text-[10px] md:text-xs uppercase font-bold tracking-[0.2em] mt-3 opacity-70">
               Active Participants
             </span>
           </div>
