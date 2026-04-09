@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {} from 'react';
+import { IBM_Plex_Mono, Montserrat } from "next/font/google";
 import DecryptedTimerText from './ui/DecryptedText';
 
 const Hero: React.FC = () => {
@@ -45,8 +46,8 @@ const Hero: React.FC = () => {
 
   return (
     <div 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden p-6 md:p-12"
-      style={{ backgroundColor: CREAM_BG }}
+      className="relative min-h-screen flex items-center justify-center overflow-hidden p-6 md:p-12" 
+      style={{ backgroundColor: CREAM_BG, fontFamily: 'Montserrat'}}
     >
       
       {/* Background Texture (Subtle Grid) */}
@@ -72,7 +73,7 @@ const Hero: React.FC = () => {
             <div className="font-mono text-xs mb-2 animate-pulse tracking-widest" style={{ color: RED }}>
               STATUS: INITIALIZING...
             </div>
-            <div className="font-sans text-5xl md:text-7xl font-black text-white leading-[0.9] tracking-tighter">
+            <div className="font-sans text-5xl md:text-7xl font-bold text-white leading-[0.9] tracking-normal">
               HACKATHON<br/>2026
             </div>
           </div>
@@ -88,13 +89,13 @@ const Hero: React.FC = () => {
           </div>
           
           <h1 
-            className="text-5xl md:text-6xl font-black uppercase leading-[0.95] tracking-tight"
+            className="text-5xl md:text-6xl font-extrabold uppercase leading-[0.95] tracking-normal"
             style={{ color: DARK_TEXT }}
           >
             THE ARCHITECTS OF THE <span style={{ color: RED }}>UNDERGROUND</span>
           </h1>
 
-          <div className="flex gap-6 items-end">
+          {/* <div className="flex gap-6 items-end">
             {[
               { label: 'DAYS', value: timeLeft.days },
               { label: 'HRS', value: timeLeft.hrs },
@@ -107,7 +108,6 @@ const Hero: React.FC = () => {
                     {item.label}:
                   </span>
                   
-                  {/* The Decrypting Number */}
                   <DecryptedTimerText 
                     text={String(item.value).padStart(2, '0')}
                     speed={55}
@@ -122,7 +122,7 @@ const Hero: React.FC = () => {
                 )}
               </React.Fragment>
             ))}
-          </div>
+          </div> */}
           
           <div className="p-2">
               <p 

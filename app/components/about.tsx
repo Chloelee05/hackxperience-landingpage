@@ -1,4 +1,5 @@
 import React from 'react';
+import { IBM_Plex_Mono, Montserrat } from "next/font/google";
 
 const About: React.FC = () => {
   // Color Palette Constants
@@ -9,7 +10,7 @@ const About: React.FC = () => {
   const TEXT_DIM = "rgba(255, 255, 255, 0.7)";
 
   return (
-    <section className="py-24 px-6 max-w-7xl mx-auto font-sans">
+    <section className="py-24 px-6 max-w-7xl mx-auto font-sans" style={{ fontFamily: 'Montserrat'}}>
       <div className="grid lg:grid-cols-3 gap-8">
         
         {/* Main Large Card (Dark) */}
@@ -22,11 +23,11 @@ const About: React.FC = () => {
           }}
         >
           <h2 className="text-4xl md:text-5xl font-black mb-8 tracking-tight">
-            ACCELERATE YOUR GROWTH
+            HACKATHON_OVERVIEW
           </h2>
           
           <p className="text-lg md:text-xl leading-relaxed mb-12 opacity-80 font-medium">
-            Hackexperience 2026 is a 24-hour build sprint is a dedicated space where ideas turn into real products. Participants will focus on rapid prototyping and technical execution within a high-intensity environment. It is a practical opportunity to build alongside other developers
+            HackXperience 2026 is a 24-hour hackathon where teams of 4–5 turn problem statements into working prototypes. From kickoff to final commit, you'll ideate, build, and ship — then present to industry judges. Last year's run produced 20 projects from 90+ builders and took home SIM's Outstanding Event Award (Silver). This time, we're scaling up.
           </p>
 
           <div className="grid md:grid-cols-2 gap-10 pt-10 border-t border-white/10">
@@ -35,8 +36,7 @@ const About: React.FC = () => {
                 // WHO SHOULD JOIN
               </h4>
               <p className="text-sm md:text-base leading-relaxed" style={{ color: TEXT_DIM }}>
-                From first-year students to seasoned developers, designers, and 
-                problem solvers. Diversity drives innovation.
+                Web devs, AI engineers, designers, product thinkers, business analysts — anyone who builds. Year 1 to Year 3. No minimum skill level, just the drive to ship something real in 24 hours.
               </p>
             </div>
             <div>
@@ -44,8 +44,7 @@ const About: React.FC = () => {
                 // WHAT YOU GET
               </h4>
               <p className="text-sm md:text-base leading-relaxed" style={{ color: TEXT_DIM }}>
-                Access to industry mentors, exclusive workshops, networking 
-                with tech recruiters.
+                Pre-event workshops in React & Next.js to get you hackathon-ready. On-site mentorship from industry professionals. A stage to demo your build. And prizes worth fighting for.
               </p>
             </div>
           </div>
