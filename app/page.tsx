@@ -13,15 +13,15 @@ import Footer from "./components/footer";
 export default function Home() {
   return (
     <main>
-      <Hero></Hero>
-      <About></About>
-      <PastEvents></PastEvents>
-      <PreEvent />
+      <Hero/>
+      <About/>
+      <PastEvents/>
+      <PreEvent/>
       <TimeLine/>
-      <Faq />
-      <Committee />
-      <TimelineCta />
-      <Footer />
+      <Faq/>
+      <Committee/>
+      <TimelineCta/>
+      <Footer/>
     </main>
   )
 }
