@@ -1,23 +1,98 @@
 # HackXperience 2026
 
-## Event
-- Name: HackXperience 2026
-- Organizer: SIM IT Club
-- Date: 22-23 May 2026
-- Venue: SIM, Singapore
-- Duration: 24 hours (not overnight)
+## About
+HackXperience 2026 is a student-run hackathon organised by SIM IT Club (SIMITC), a student-led technology club under SIM Student Life at Singapore Institute of Management. The event challenges student teams to build real web applications solving real-world problems over a 24-hour period (non-overnight), with mentorship, workshops, and judging by industry professionals.
+
+## Event Details
+- Date: 22–23 May 2026 (tentative)
+- Duration: 24 hours (non-overnight)
+- Venue: Singapore Institute of Management (SIM), 461 Clementi Road, Singapore 599491
+- Organiser: SIM IT Club
 - Contact: it@mymail.sim.edu.sg
+- Telegram community: https://t.me/+o_3QtjEFmNFhYmFl
+- Telegram contact: @FukutaroJFS
 - Instagram: https://www.instagram.com/simitclub
 - LinkedIn: https://www.linkedin.com/company/sim-information-technology-club/
+- Website: https://hackxperience2026.vercel.app
 
-## Pre-events
-- Project Showcase: 15 Apr 2026, 12-4PM, SIM Block B Level 1
-- React & Next.js Workshop: 23 & 30 April 2026, SIM Campus
+## Pre-Events
+- IT Club Project Showcase: 15 April 2026, 12:00–16:00, SIM Student Hub, Block B Level 1
+- React & Next.js Workshop (2-part): Dates TBA, 19:00–22:00, SIM Campus
 
-## Past Hackathons
-- HackXperience 2025: 90+ participants, 20 projects, SIM Outstanding Event Award Silver
-- Omnitool: 95 participants, 20-21 projects
+## Participation
+- Expected participants: ~150 students across 30–38 teams
+- Team size: 4–5 members
+- Who can join: All SIM students, all years welcome
+- Participant profiles: Web Developers, Data/AI Engineers, UI/UX Designers, Cybersecurity, Product Managers, Business Analysts
+- Registration fee: Free
+
+## Problem Statement Tracks
+HackXperience 2026 challenges teams to build working web or AI-powered apps. Sample tracks:
+- Reinventing the Art of Gift Giving — build an app for gift discovery and group gifting
+- Gamify Healthy Cooking — gamified app to make healthy eating community-driven
+- AI for Productivity — AI-powered app to help people work faster and access equal opportunities
+- AI for the Planet — AI-powered environmental app for forest monitoring, natural resources, or climate impact modelling
+
+Problem statements are revealed during the opening ceremony on Day 1.
+
+## Past Events
+- HackXperience 2025: 90+ participants, 20 projects, winner of SIM Outstanding Event Award (Silver, 2025 SLAAN Award). Challenge tracks: DynamicWeb & Kitchen Copilot.
+- Omnitool Hackathon: 95 participants, 20–21 projects.
+
+## About SIM IT Club
+SIM IT Club (ITC) is a student-led organisation under SIM Student Life. Mission: create safe spaces for students to learn technology, build projects, and grow as a community of builders. Tagline: "Your Arrow into Tech."
+
+Programs run by SIM IT Club:
+- ITCamp: Frontendamentals — 3-month weekly web development bootcamp covering HTML, CSS, Tailwind, React, Next.js, and Vercel deployment
+- Industry Workshops — guest-led sessions with tech professionals
+- Internal Projects — committee members build and ship real products
+- HackXperience — annual hackathon open to all SIM students
 
 ## Pages
-- /
-- /projects
+- Homepage: https://hackxperience2026.vercel.app
+- Projects showcase: https://hackxperience2026.vercel.app/projects
+
+## Frequently Asked Questions
+
+### Registration
+Q: How do I register for HackXperience 2026?
+A: Registration details will be announced in the ITCommunity Telegram group (https://t.me/+o_3QtjEFmNFhYmFl). Join to be the first to know when registration opens.
+
+Q: Is there a registration fee?
+A: No. HackXperience 2026 is free to participate.
+
+Q: Who is eligible to participate?
+A: All SIM students are welcome. All years are eligible.
+
+### Pre-Events
+Q: What are the pre-events for HackXperience 2026?
+A: There are two pre-events. The IT Club Project Showcase is on 15 April 2026, 12PM–4PM at SIM Student Hub, Block B Level 1. The React & Next.js Workshop is a two-part session (dates TBA, 7PM–10PM at SIM Campus). Follow the ITCommunity Telegram group (https://t.me/+o_3QtjEFmNFhYmFl) for date announcements.
+
+Q: What is the IT Club Project Showcase?
+A: SIM IT Club subcommittees spent months building projects collaboratively. On 15 April, they showcase what they built. Visitors can get inspiration on what a typical project looks like and consult subcommittee members on tech stack, process, and tips.
+
+Q: What is the React & Next.js Workshop?
+A: A two-part hands-on workshop taught by trained SIM IT Club committee members, covering React and Next.js — popular, industry-standard development tools. Designed to equip participants with web development skills and prepare them for the hackathon. Attendees who complete both sessions receive a free e-Certificate.
+
+Q: Do I need to attend the pre-events to join the hackathon?
+A: No, pre-events are not mandatory but are highly recommended.
+
+### Main Event
+Q: When and where is HackXperience 2026?
+A: Dates are tentative. The hackathon spans 2 days on SIM Campus. Follow the ITCommunity Telegram group (https://t.me/+o_3QtjEFmNFhYmFl) for confirmed dates.
+
+Q: What are the problem statements?
+A: Problem statements are revealed during the opening ceremony on Day 1 of the hackathon.
+
+Q: How will projects be judged?
+A: Teams present their projects to industry judges. Winners are announced at the closing ceremony.
+
+### General
+Q: What is HackXperience?
+A: HackXperience is SIM IT Club's annual hackathon — a 24-hour challenge with workshops, mentorship, and presentations. In 2025, it brought together 90+ participants across 20 projects and won SIM's Outstanding Event Award (Silver).
+
+Q: How many participants are expected for HackXperience 2026?
+A: Approximately 150 students across 30–38 teams.
+
+Q: Who can I contact for more questions?
+A: Email it@mymail.sim.edu.sg, join the ITCommunity Telegram group (https://t.me/+o_3QtjEFmNFhYmFl), or PM @FukutaroJFS on Telegram.
