@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { IBM_Plex_Mono, Montserrat } from "next/font/google";
-// import DecryptedTimerText from './ui/DecryptedText'; // Assuming you still have this commented out for now
+// import DecryptedTimerText from './ui/DecryptedText';
 
 const Hero: React.FC = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -32,7 +32,6 @@ const Hero: React.FC = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Color Palette Constants based on your image:
   const RED = "#c00000";
   const DARK_RED = "#A20000";
   const CREAM_BG = "#f2ede5";
@@ -45,12 +44,10 @@ const Hero: React.FC = () => {
       style={{ backgroundColor: CREAM_BG, fontFamily: 'Montserrat, sans-serif'}}
     >
       
-      {/* Background Texture (Subtle Grid) */}
       <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none" 
            style={{ backgroundImage: `linear-gradient(${DARK_TEXT} 1px, transparent 1px), linear-gradient(90deg, ${DARK_TEXT} 1px, transparent 1px)`, backgroundSize: '20px 20px' }}>
       </div>
 
-      {/* Added gap-y-10 to give breathing room on mobile when elements stack vertically */}
       <div className="relative w-full max-w-7xl flex flex-col lg:flex-row items-center gap-10 lg:gap-16 z-10 pt-10 lg:pt-0">
         
         {/* Left Side: CRT Monitor Box */}
@@ -66,12 +63,10 @@ const Hero: React.FC = () => {
           ></div>
 
           <div className="relative h-full flex flex-col justify-end p-4 md:p-6 bg-linear-to-t from-black/90 to-transparent">
-            {/* Adjusted font-size for mobile (text-[10px] -> text-xs) */}
             <div className="font-mono text-[10px] md:text-xs mb-2 animate-pulse tracking-widest" style={{ color: RED }}>
               STATUS: INITIALIZING...
             </div>
-            {/* Adjusted font-size to fit container on small phones (text-4xl -> text-5xl -> text-7xl) */}
-            <div className="font-sans text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[0.9] tracking-normal">
+            <div className="font-sans text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[0.9] tracking-normal">
               HackXperience<br/>2026
             </div>
           </div>
@@ -87,7 +82,6 @@ const Hero: React.FC = () => {
             // INITIATING HACKXPERIENCE
           </div>
           
-          {/* Adjusted title text sizes so "UNDERGROUND" doesn't break horribly on mobile */}
           <h1 
             className="text-4xl sm:text-5xl lg:text-6xl font-extrabold uppercase leading-[0.95] tracking-normal"
             style={{ color: DARK_TEXT }}

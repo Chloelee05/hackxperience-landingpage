@@ -34,11 +34,11 @@ const PastEvents: React.FC = () => {
       title: <>OMNITOOL <span style={{ color: RED }}>HACKATHON</span> 2024</>,
       desc: "Omnitool Hackathon 2024 focused on building versatile utility tools for students. It served as our foundational event, establishing the core community of developers and designers that would go on to build the Architects of the Underground.",
       imgs: [
-        "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=800",
-        "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=800",
-        "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800",
-        "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=800",
-        "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800"
+        "OmniTool1.jpg",
+        "OmniTool2.jpg",
+        "OmniTool3.jpg",
+        "OmniTool4.jpg",
+        "OmniTool5.jpg"
       ], 
       tag: "PROJECT_LOG_024",
       stats: [
@@ -78,7 +78,7 @@ const PastEvents: React.FC = () => {
         </h2>
       </div>
 
-      <section className="py-10 px-6 max-w-7xl mx-auto font-sans" style={{ backgroundColor: CREAM_BG, fontFamily: 'Montserrat, sans-serif' }}>
+      <section className="py-10 px-6 mx-auto font-sans" style={{ backgroundColor: CREAM_BG, fontFamily: 'Montserrat, sans-serif' }}>
 
         {/* Tabs / Year Selector */}
         <div className="flex gap-4 mb-10 overflow-x-auto pb-2">
@@ -168,8 +168,7 @@ const PastEvents: React.FC = () => {
           {/* Bottom Section: Branding & Description */}
           <div className="flex flex-col md:flex-row gap-8 items-start pt-6">
             <div className="w-full md:w-[40%] max-w-md space-y-4">
-              {/* FIX 3: Added break-words and adjusted text sizes down slightly for mobile */}
-              <h3 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tighter leading-none break-words" style={{ color: DARK_TEXT }}>
+              <h3 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tighter leading-none wrap-break-words" style={{ color: DARK_TEXT }}>
                 {current.title}
               </h3>
               <div className="inline-block px-4 py-1 font-mono text-sm font-bold border-2" style={{ borderColor: RED, color: RED }}>
