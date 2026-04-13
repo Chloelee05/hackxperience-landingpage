@@ -72,7 +72,7 @@ const Hero: React.FC = () => {
             </div>
             {/* Adjusted font-size to fit container on small phones (text-4xl -> text-5xl -> text-7xl) */}
             <div className="font-sans text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[0.9] tracking-normal">
-              HACKATHON<br/>2026
+              HackXperience<br/>2026
             </div>
           </div>
         </div>
@@ -84,7 +84,7 @@ const Hero: React.FC = () => {
             className="inline-block px-3 py-1.5 font-mono uppercase text-[10px] md:text-xs tracking-widest font-bold"
             style={{ backgroundColor: RED, color: OFF_WHITE }}
           >
-            // PROTOCOL_OMEGA_ACTIVE
+            // INITIATING HACKXPERIENCE
           </div>
           
           {/* Adjusted title text sizes so "UNDERGROUND" doesn't break horribly on mobile */}
