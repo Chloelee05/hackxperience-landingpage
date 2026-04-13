@@ -1,4 +1,5 @@
 "use client"
+import Navbar from "./components/navbar";
 import Hero from "./components/hero";
 import About from "./components/about";
 import PastEvents from "./components/pastEvents";
@@ -12,7 +13,8 @@ import Footer from "./components/footer";
 
 export default function Home() {
   return (
-    <main>
+    <main className="pt-11">
+      <Navbar/>
       <Hero/>
       <About/>
       <PastEvents/>
