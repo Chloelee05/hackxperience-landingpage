@@ -75,10 +75,10 @@ const About: React.FC = () => {
             style={{ backgroundColor: RED, color: WHITE }}
           >
             <span className="text-5xl md:text-6xl font-black">
-              500+
+              100+
             </span>
             <span className="font-mono text-[10px] md:text-xs uppercase font-bold tracking-[0.2em] mt-3 opacity-70">
-              Active Participants
+              BUILDERS EXPECTED
             </span>
           </div>
 
